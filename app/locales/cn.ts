@@ -360,7 +360,7 @@ const cn = {
   },
   Store: {
     DefaultTopic: "新的聊天",
-    BotHello: "有什么可以帮你的吗",
+    BotHello: "重新上线，此次使用的是付费的接口，费用是我自掏腰包，gpt4测试上线，由于4的计费是3.5的20倍，所以请大家节约使用，或者给我打钱😋",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,
