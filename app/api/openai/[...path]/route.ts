@@ -1,4 +1,4 @@
-import { type OpenAIListModelResponse } from "@/app/client/platforms/openai";
+import { type OpenAIList } from "@/app/client/platforms/openai";
 import { getServerSideConfig } from "@/app/config/server";
 import { ModelProvider, OpenaiPath } from "@/app/constant";
 import { prettyObject } from "@/app/utils/format";
@@ -6,7 +6,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { auth } from "../../auth";
 import { requestOpenai } from "../../common";
 
-const ALLOWD_PATH = new Set(Object.values(OpenaiPath));
+const ALLOWD_PATH = new Set(Object.values(OpenaiPath) as string[]);
 
 function getModels(remoteModelRes: OpenAIListModelResponse) {
   const config = getServerSideConfig();
